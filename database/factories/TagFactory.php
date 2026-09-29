@@ -17,8 +17,23 @@ class TagFactory extends Factory
      */
     public function definition(): array
     {
+        $tags = [
+            'Terlaris',
+            'Produk Baru',
+            'Promo Spesial',
+            'Edisi Terbatas',
+            'Ramah Lingkungan',
+            'Pilihan Editor',
+            'Sedang Tren',
+            'Diskon Eksklusif',
+            'Kualitas Premium',
+            'Cuci Gudang',
+            'Gratis Ongkir',
+            'Garansi Resmi',
+        ];
+
         return [
-            'name' => fake()->unique()->word(),
+            'name' => fake()->randomElement($tags).' '.fake()->numberBetween(1, 999),
         ];
     }
 }

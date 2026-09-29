@@ -36,15 +36,16 @@ class ProductSeeder extends Seeder
             $tags = Tag::all();
         }
 
-        // Generate at least 50 products
-        Product::factory(50)->make()->each(function (Product $product) use ($categories, $creatorUsers, $tags) {
-            $product->category_id = $categories->random()->id;
-            $product->user_id = $creatorUsers->random()->id;
-            $product->save();
+        // Generate at least 50 products using only seeded categories
+        for ($i = 0; $i < 50; $i++) {
+            $product = Product::factory()->create([
+                'category_id' => $categories->random()->id,
+                'user_id' => $creatorUsers->random()->id,
+            ]);
 
             // Attach 1 to 3 random tags for each product
             $randomTags = $tags->random(fake()->numberBetween(1, min(3, $tags->count())));
             $product->tags()->attach($randomTags);
-        });
+        }
     }
 }
