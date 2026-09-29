@@ -13,14 +13,14 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            'Electronics',
-            'Fashion & Apparel',
-            'Home & Living',
-            'Beauty & Personal Care',
-            'Sports & Outdoors',
-            'Books & Stationery',
-            'Toys & Hobbies',
-            'Automotive',
+            'Elektronik & Gadget',
+            'Busana & Pakaian',
+            'Perabot & Rumah Tangga',
+            'Kecantikan & Perawatan',
+            'Olahraga & Aktivitas Luar',
+            'Buku & Alat Tulis',
+            'Mainan & Hobi',
+            'Otomotif & Aksesoris',
         ];
 
         foreach ($categories as $name) {

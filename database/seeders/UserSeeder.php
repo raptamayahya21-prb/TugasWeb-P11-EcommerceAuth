@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         User::firstOrCreate(
             ['email' => 'user@example.com'],
             [
-                'name' => 'Regular User',
+                'name' => 'Pengguna Pelanggan',
                 'password' => Hash::make('password'),
                 'role' => UserRole::User,
                 'email_verified_at' => now(),
@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
         User::firstOrCreate(
             ['email' => 'admin@example.com'],
             [
-                'name' => 'Admin User',
+                'name' => 'Administrator Toko',
                 'password' => Hash::make('password'),
                 'role' => UserRole::Admin,
                 'email_verified_at' => now(),
@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
         User::firstOrCreate(
             ['email' => 'editor@example.com'],
             [
-                'name' => 'Editor User',
+                'name' => 'Editor Konten',
                 'password' => Hash::make('password'),
                 'role' => UserRole::Editor,
                 'email_verified_at' => now(),
