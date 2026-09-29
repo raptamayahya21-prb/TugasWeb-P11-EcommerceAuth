@@ -179,18 +179,18 @@ php artisan tinker
 
 * **Query 1 — Verifikasi Jumlah Data Katalog Produk**:
   ```php
-  Product::count();
+  App\Models\Product::count();
   // Output: 50
   ```
 * **Query 2 — Eager Loading Produk Beserta Relasi Kategori**:
   ```php
-  Product::with('category')->first();
-  // Output: Model Product lengkap dengan relasi Category 'Audio & TWS Nirkabel'
+  App\Models\Product::with('category')->first();
+  // Output: Model Product {#9658} lengkap dengan relasi Category 'Audio & TWS Nirkabel'
   ```
 * **Query 3 — Relasi HasMany User ke Pesanan**:
   ```php
-  User::first()->orders->count();
-  // Output: 1
+  App\Models\User::first()->orders->count();
+  // Output: 4
   ```
 
 ---
@@ -200,16 +200,16 @@ php artisan tinker
 
 * **Query 4 — Agregasi withSum untuk Menghitung Subtotal Item Pesanan**:
   ```php
-  Order::withSum('items as total', 'price')->first();
-  // Output: Model Order dengan atribut agregasi total: "8499000"
+  App\Models\Order::withSum('items as total', 'price')->first();
+  // Output: Model Order {#9272} dengan atribut total: "2374050" dan total_amount: 7137150
   ```
 * **Query 5 — Query Relasional whereRelation Dikombinasikan dengan Local Scope**:
   ```php
-  Product::whereRelation('category', 'name', 'Smartphone Flagship')
+  App\Models\Product::whereRelation('category', 'name', 'Smartphone Flagship')
       ->inStock()
       ->take(2)
       ->get(['id', 'name', 'price', 'stock']);
-  // Output: Koleksi produk Flagship (Samsung S24 Ultra & iPhone 15 Pro Max) yang tersedia di stok.
+  // Output: Koleksi produk (Sony WH-1000XM5 & Xiaomi Pad 6) yang tersedia di stok.
   ```
 
 ---
