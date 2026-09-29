@@ -54,9 +54,9 @@
                 <div class="flex items-center gap-3">
                     <a href="/" class="flex items-center gap-3 group">
                         <div class="w-9 h-9 rounded-xl bg-claude-surface-elevated dark:bg-claude-surface-dark-elevated border border-claude-border-default dark:border-claude-border-dark flex items-center justify-center text-claude-terracotta dark:text-claude-terracotta-dark shadow-sm group-hover:scale-105 transition-transform duration-200">
-                            <!-- Monogram Asterisk Emblem -->
+                            <!-- E-Commerce Store Emblem -->
                             <svg class="w-4 h-4 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M5.636 18.364L18.364 5.636" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                             </svg>
                         </div>
                         <div class="flex flex-col">
@@ -172,8 +172,7 @@
             <!-- Hero Editorial Section -->
             <section class="pt-12 pb-8 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-claude-surface dark:bg-claude-surface-dark border border-claude-border-default dark:border-claude-border-dark text-claude-terracotta dark:text-claude-terracotta-dark mb-4">
-                    <span class="w-1.5 h-1.5 rounded-full bg-claude-terracotta animate-pulse"></span>
-                    <span>Editorial Bookish &bull; Warm Intellectual Minimalism</span>
+                    <span>Curated E-Commerce Collection &bull; Premium Essentials</span>
                 </div>
 
                 <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-claude-text-primary dark:text-claude-text-dark-primary leading-[1.15]">
@@ -243,14 +242,14 @@
                                 </select>
                             </div>
 
-                            <!-- Model / Version Pill & Send Icon -->
+                            <!-- Search Action Indicator -->
                             <div class="flex items-center gap-2">
                                 <span class="hidden sm:inline-flex items-center gap-1 text-[11px] font-mono text-claude-text-tertiary">
-                                    <span>Catalog 3.7</span>
+                                    <span>Live Filter</span>
                                 </span>
-                                <div class="w-7 h-7 rounded-full bg-claude-terracotta text-white flex items-center justify-center shadow-sm">
+                                <div class="w-7 h-7 rounded-xl bg-claude-terracotta text-white flex items-center justify-center shadow-sm">
                                     <svg class="w-3.5 h-3.5 stroke-[2]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607z" />
                                     </svg>
                                 </div>
                             </div>
@@ -387,10 +386,11 @@
                                             tags: [{{ $product->tags->map(fn($t) => "'".addslashes($t->name)."'")->join(', ') }}]
                                         }"
                                         class="p-2 rounded-xl text-claude-text-secondary dark:text-claude-text-dark-secondary hover:text-claude-terracotta dark:hover:text-claude-terracotta-dark hover:bg-claude-surface dark:hover:bg-claude-surface-dark border border-claude-border-default dark:border-claude-border-dark transition-colors"
-                                        title="Inspect Spec Sheet (Artifact)"
+                                        title="Quick View Details"
                                     >
                                         <svg class="w-4 h-4 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
                                     </button>
 
@@ -446,9 +446,11 @@
                 <div>
                     <div class="p-5 border-b border-claude-border-default dark:border-claude-border-dark flex items-center justify-between bg-claude-surface dark:bg-claude-surface-dark">
                         <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-claude-terracotta animate-pulse"></span>
+                            <svg class="w-4 h-4 text-claude-terracotta stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                            </svg>
                             <span class="text-xs font-mono tracking-wider uppercase text-claude-text-secondary dark:text-claude-text-dark-secondary">
-                                Artifact &bull; Product Specification
+                                Product Overview &bull; Specifications
                             </span>
                         </div>
                         <button
@@ -577,13 +579,13 @@
                 <div class="flex items-center gap-3">
                     <div class="w-7 h-7 rounded-lg bg-claude-surface-elevated dark:bg-claude-surface-dark-elevated border border-claude-border-default dark:border-claude-border-dark flex items-center justify-center text-claude-terracotta">
                         <svg class="w-3.5 h-3.5 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M5.636 18.364L18.364 5.636" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                         </svg>
                     </div>
                     <span class="font-serif font-medium text-claude-text-primary dark:text-claude-text-dark-primary">
                         L’Atelier & Co.
                     </span>
-                    <span class="text-xs text-claude-text-tertiary font-mono">&mdash; Editorial Bookish Edition</span>
+                    <span class="text-xs text-claude-text-tertiary font-mono">&mdash; Curated E-Commerce</span>
                 </div>
 
                 <div class="flex flex-wrap items-center gap-6 text-xs text-claude-text-tertiary">
