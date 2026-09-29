@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }} &mdash; Editorial Workspace</title>
+        <title>{{ config('app.name', 'Laravel') }} &mdash; Konsol Manajemen</title>
 
         <!-- Google Fonts: Lora (Editorial Serif), Inter, JetBrains Mono -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
         <div>
             @include('layouts.navigation')
 
-            <!-- Page Heading -->
+            <!-- Judul Halaman -->
             @isset($header)
                 <header class="bg-claude-surface dark:bg-claude-surface-dark border-b border-claude-border-default dark:border-claude-border-dark py-6">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +37,7 @@
                 </header>
             @endisset
 
-            <!-- Page Content -->
+            <!-- Konten Halaman -->
             <main class="py-8">
                 {{ $slot }}
             </main>
@@ -45,7 +45,7 @@
 
         <footer class="border-t border-claude-border-default dark:border-claude-border-dark py-6 text-center text-xs text-claude-text-tertiary dark:text-claude-text-dark-tertiary">
             <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-                <span>L’Atelier & Co. &middot; Editorial Bookish Design System</span>
+                <span>Katalog Toko &middot; Desain Minimalis & Modern</span>
                 <span>Tugas Rutin 11 &mdash; E-Commerce DB & Auth</span>
             </div>
         </footer>

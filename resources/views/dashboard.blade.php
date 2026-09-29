@@ -4,15 +4,15 @@
             <div>
                 <div class="flex items-center gap-2 mb-1">
                     <span class="text-xs font-mono tracking-wider uppercase text-claude-terracotta dark:text-claude-terracotta-dark font-semibold">
-                        Management Console
+                        Konsol Manajemen
                     </span>
                     <span class="text-claude-text-tertiary dark:text-claude-text-dark-tertiary">&bull;</span>
                     <span class="text-xs font-mono text-claude-text-tertiary dark:text-claude-text-dark-tertiary">
-                        Role: {{ ucfirst(Auth::user()->role->value ?? Auth::user()->role) }}
+                        Peran: {{ ucfirst(Auth::user()->role->value ?? Auth::user()->role) }}
                     </span>
                 </div>
                 <h1 class="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-claude-text-primary dark:text-claude-text-dark-primary">
-                    Welcome back, {{ Auth::user()->name }}
+                    Selamat datang kembali, {{ Auth::user()->name }}
                 </h1>
             </div>
 
@@ -24,7 +24,7 @@
                     <svg class="w-4 h-4 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                     </svg>
-                    <span>View Storefront</span>
+                    <span>Lihat Katalog Toko</span>
                 </a>
 
                 @if(Auth::user()->isAdmin() || Auth::user()->isEditor())
@@ -36,7 +36,7 @@
                         <svg class="w-4 h-4 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
                         </svg>
-                        <span>Filament Admin</span>
+                        <span>Panel Admin (Filament)</span>
                     </a>
                 @endif
             </div>
@@ -44,12 +44,12 @@
     </x-slot>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <!-- 4 Metric Cards -->
+        <!-- 4 Kartu Metrik -->
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <!-- Products Card -->
+            <!-- Kartu Total Produk -->
             <div class="p-5 rounded-2xl bg-claude-surface dark:bg-claude-surface-dark border border-claude-border-default dark:border-claude-border-dark shadow-claude-card">
                 <div class="flex items-center justify-between text-claude-text-tertiary dark:text-claude-text-dark-tertiary mb-2">
-                    <span class="text-xs uppercase font-medium tracking-wider">Total Products</span>
+                    <span class="text-xs uppercase font-medium tracking-wider">Total Produk</span>
                     <svg class="w-4 h-4 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
                     </svg>
@@ -58,14 +58,14 @@
                     {{ $totalProducts ?? 0 }}
                 </div>
                 <div class="mt-2 text-xs text-claude-text-secondary dark:text-claude-text-dark-secondary">
-                    Registered in database
+                    Tersimpan di database
                 </div>
             </div>
 
-            <!-- Categories Card -->
+            <!-- Kartu Kategori -->
             <div class="p-5 rounded-2xl bg-claude-surface dark:bg-claude-surface-dark border border-claude-border-default dark:border-claude-border-dark shadow-claude-card">
                 <div class="flex items-center justify-between text-claude-text-tertiary dark:text-claude-text-dark-tertiary mb-2">
-                    <span class="text-xs uppercase font-medium tracking-wider">Categories</span>
+                    <span class="text-xs uppercase font-medium tracking-wider">Kategori</span>
                     <svg class="w-4 h-4 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
                     </svg>
@@ -74,14 +74,14 @@
                     {{ $totalCategories ?? 0 }}
                 </div>
                 <div class="mt-2 text-xs text-claude-text-secondary dark:text-claude-text-dark-secondary">
-                    Active departments
+                    Kategori aktif
                 </div>
             </div>
 
-            <!-- In Stock Card -->
+            <!-- Kartu Stok Tersedia -->
             <div class="p-5 rounded-2xl bg-claude-surface dark:bg-claude-surface-dark border border-claude-border-default dark:border-claude-border-dark shadow-claude-card">
                 <div class="flex items-center justify-between text-claude-text-tertiary dark:text-claude-text-dark-tertiary mb-2">
-                    <span class="text-xs uppercase font-medium tracking-wider">In Stock</span>
+                    <span class="text-xs uppercase font-medium tracking-wider">Stok Tersedia</span>
                     <svg class="w-4 h-4 stroke-[1.5] text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -90,14 +90,14 @@
                     {{ $inStockProducts ?? 0 }}
                 </div>
                 <div class="mt-2 text-xs text-claude-text-secondary dark:text-claude-text-dark-secondary">
-                    Available to purchase
+                    Siap dipesan
                 </div>
             </div>
 
-            <!-- Discounted Card -->
+            <!-- Kartu Diskon -->
             <div class="p-5 rounded-2xl bg-claude-surface dark:bg-claude-surface-dark border border-claude-border-default dark:border-claude-border-dark shadow-claude-card">
                 <div class="flex items-center justify-between text-claude-text-tertiary dark:text-claude-text-dark-tertiary mb-2">
-                    <span class="text-xs uppercase font-medium tracking-wider">On Sale</span>
+                    <span class="text-xs uppercase font-medium tracking-wider">Sedang Promo</span>
                     <svg class="w-4 h-4 stroke-[1.5] text-claude-terracotta dark:text-claude-terracotta-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
                     </svg>
@@ -106,17 +106,17 @@
                     {{ $discountedProducts ?? 0 }}
                 </div>
                 <div class="mt-2 text-xs text-claude-text-secondary dark:text-claude-text-dark-secondary">
-                    Active promotional discounts
+                    Produk dengan potongan harga
                 </div>
             </div>
         </div>
 
-        <!-- Technical Verification & Eager Loading Banner -->
+        <!-- Banner Verifikasi Teknis Eager Loading -->
         <div class="p-6 rounded-2xl bg-claude-surface-elevated dark:bg-claude-surface-dark-elevated border border-claude-border-default dark:border-claude-border-dark shadow-claude-card flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div class="space-y-1">
                 <div class="flex items-center gap-2">
                     <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
-                        N+1 Prevention Active
+                        Pencegahan N+1 Aktif
                     </span>
                     <span class="text-xs text-claude-text-tertiary font-mono">with(['category', 'tags'])</span>
                 </div>
@@ -132,26 +132,26 @@
                 target="_blank"
                 class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-medium bg-claude-surface dark:bg-claude-surface-dark border border-claude-border-default dark:border-claude-border-dark hover:border-claude-terracotta dark:hover:border-claude-terracotta-dark transition-colors shrink-0"
             >
-                <span>Run Live Query Benchmark</span>
+                <span>Uji Live Benchmark Query</span>
                 <svg class="w-3.5 h-3.5 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                 </svg>
             </a>
         </div>
 
-        <!-- Recent Products Table (Bookish / Manuscript Table) -->
+        <!-- Tabel Produk Terbaru -->
         <div class="rounded-2xl bg-claude-surface-elevated dark:bg-claude-surface-dark-elevated border border-claude-border-default dark:border-claude-border-dark shadow-claude-card overflow-hidden">
             <div class="p-6 border-b border-claude-border-subtle dark:border-claude-border-dark-subtle flex items-center justify-between">
                 <div>
                     <h2 class="font-serif text-xl font-medium text-claude-text-primary dark:text-claude-text-dark-primary">
-                        Recent Catalog Entries
+                        Daftar Produk Terbaru
                     </h2>
                     <p class="text-xs text-claude-text-secondary dark:text-claude-text-dark-secondary mt-0.5">
-                        Showing latest active products loaded with Eloquent relationships
+                        Menampilkan produk aktif terkini yang dimuat dengan relasi Eloquent
                     </p>
                 </div>
                 <a href="/" class="text-xs font-medium text-claude-terracotta dark:text-claude-terracotta-dark hover:underline flex items-center gap-1">
-                    <span>View all items</span>
+                    <span>Lihat semua produk</span>
                     <svg class="w-3 h-3 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
@@ -162,12 +162,12 @@
                 <table class="w-full text-left text-sm">
                     <thead class="bg-claude-surface dark:bg-claude-surface-dark border-b border-claude-border-subtle dark:border-claude-border-dark-subtle text-xs uppercase font-medium text-claude-text-tertiary dark:text-claude-text-dark-tertiary tracking-wider font-mono">
                         <tr>
-                            <th class="px-6 py-3.5">Product</th>
-                            <th class="px-6 py-3.5">Category</th>
-                            <th class="px-6 py-3.5">Price</th>
-                            <th class="px-6 py-3.5">Stock</th>
+                            <th class="px-6 py-3.5">Produk</th>
+                            <th class="px-6 py-3.5">Kategori</th>
+                            <th class="px-6 py-3.5">Harga</th>
+                            <th class="px-6 py-3.5">Stok</th>
                             <th class="px-6 py-3.5">Rating</th>
-                            <th class="px-6 py-3.5">Tags</th>
+                            <th class="px-6 py-3.5">Tag</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-claude-border-subtle dark:divide-claude-border-dark-subtle font-sans">
@@ -183,7 +183,7 @@
                                 </td>
                                 <td class="px-6 py-4 text-claude-text-secondary dark:text-claude-text-dark-secondary">
                                     <span class="inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-claude-surface dark:bg-claude-surface-dark border border-claude-border-default dark:border-claude-border-dark">
-                                        {{ $product->category->name ?? 'Uncategorized' }}
+                                        {{ $product->category->name ?? 'Tanpa Kategori' }}
                                     </span>
                                 </td>
                                 <td class="px-6 py-4">
@@ -192,7 +192,7 @@
                                     </div>
                                     @if($product->discount_percentage > 0)
                                         <div class="text-[11px] text-claude-terracotta dark:text-claude-terracotta-dark font-mono">
-                                            -{{ $product->discount_percentage }}% off
+                                            -{{ $product->discount_percentage }}% diskon
                                         </div>
                                     @endif
                                 </td>
@@ -200,17 +200,17 @@
                                     @if($product->stock > 10)
                                         <span class="inline-flex items-center gap-1.5 text-xs text-emerald-700 dark:text-emerald-400 font-medium">
                                             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                                            {{ $product->stock }} units
+                                            {{ $product->stock }} unit
                                         </span>
                                     @elseif($product->stock > 0)
                                         <span class="inline-flex items-center gap-1.5 text-xs text-amber-700 dark:text-amber-400 font-medium">
                                             <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                                            Low: {{ $product->stock }} left
+                                            Sisa {{ $product->stock }} unit
                                         </span>
                                     @else
                                         <span class="inline-flex items-center gap-1.5 text-xs text-rose-700 dark:text-rose-400 font-medium">
                                             <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
-                                            Out of stock
+                                            Stok Habis
                                         </span>
                                     @endif
                                 </td>
@@ -235,7 +235,7 @@
                         @empty
                             <tr>
                                 <td colspan="6" class="px-6 py-8 text-center text-claude-text-tertiary dark:text-claude-text-dark-tertiary italic">
-                                    No products found in database. Run seeder to populate.
+                                    Belum ada data produk di database.
                                 </td>
                             </tr>
                         @endforelse

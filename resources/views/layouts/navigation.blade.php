@@ -1,9 +1,9 @@
 <nav x-data="{ open: false }" class="bg-claude-surface dark:bg-claude-surface-dark border-b border-claude-border-default dark:border-claude-border-dark sticky top-0 z-40 backdrop-blur-md bg-opacity-95 dark:bg-opacity-95">
-    <!-- Primary Navigation Menu -->
+    <!-- Menu Navigasi Utama -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex items-center gap-8">
-                <!-- Brand Emblem & Title -->
+                <!-- Logo & Judul Brand -->
                 <div class="shrink-0 flex items-center">
                     <a href="/" class="flex items-center gap-2.5 group">
                         <div class="w-8 h-8 rounded-lg bg-claude-surface-elevated dark:bg-claude-surface-dark-elevated border border-claude-border-default dark:border-claude-border-dark flex items-center justify-center text-claude-terracotta dark:text-claude-terracotta-dark shadow-sm group-hover:scale-105 transition-transform">
@@ -13,25 +13,25 @@
                         </div>
                         <div class="flex flex-col">
                             <span class="font-serif text-base font-semibold tracking-tight text-claude-text-primary dark:text-claude-text-dark-primary leading-tight">
-                                L’Atelier
+                                Katalog Toko
                             </span>
                             <span class="text-[10px] text-claude-text-tertiary dark:text-claude-text-dark-tertiary tracking-wider uppercase font-mono">
-                                Editorial
+                                E-Commerce
                             </span>
                         </div>
                     </a>
                 </div>
 
-                <!-- Desktop Navigation Links -->
+                <!-- Tautan Navigasi Desktop -->
                 <div class="hidden space-x-1 sm:flex items-center">
                     <a href="/" class="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors {{ request()->is('/') ? 'bg-claude-surface-subtle dark:bg-claude-surface-dark-subtle text-claude-terracotta dark:text-claude-terracotta-dark' : 'text-claude-text-secondary dark:text-claude-text-dark-secondary hover:text-claude-text-primary dark:hover:text-claude-text-dark-primary' }}">
-                        Catalog
+                        Katalog
                     </a>
                     <a href="{{ route('dashboard') }}" class="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors {{ request()->routeIs('dashboard') ? 'bg-claude-surface-subtle dark:bg-claude-surface-dark-subtle text-claude-terracotta dark:text-claude-terracotta-dark' : 'text-claude-text-secondary dark:text-claude-text-dark-secondary hover:text-claude-text-primary dark:hover:text-claude-text-dark-primary' }}">
                         Dashboard
                     </a>
-                    <a href="/demo/eager-loading" target="_blank" class="px-3 py-1.5 rounded-lg text-sm font-medium text-claude-text-secondary dark:text-claude-text-dark-secondary hover:text-claude-text-primary dark:hover:text-claude-text-dark-primary transition-colors inline-flex items-center gap-1">
-                        <span>N+1 Demo</span>
+                    <a href="/demo/eager-loading" target="_blank" class="px-3 py-1.5 rounded-lg text-sm font-medium text-claude-text-secondary dark:text-claude-text-dark-secondary hover:text-claude-text-primary dark:hover:text-claude-text-dark-primary transition-colors inline-flex items-center gap-1.5">
+                        <span>Uji N+1 Query</span>
                         <svg class="w-3 h-3 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                         </svg>
@@ -41,15 +41,15 @@
                             <svg class="w-3.5 h-3.5 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                             </svg>
-                            <span>Filament Admin</span>
+                            <span>Panel Admin</span>
                         </a>
                     @endif
                 </div>
             </div>
 
-            <!-- Right Controls: Theme Toggle & User Menu -->
+            <!-- Kontrol Kanan: Tombol Tema & Menu Akun -->
             <div class="hidden sm:flex sm:items-center sm:gap-3">
-                <!-- Theme Toggle Button -->
+                <!-- Tombol Pengalih Tema -->
                 <button
                     type="button"
                     onclick="
@@ -57,7 +57,7 @@
                         localStorage.setItem('theme', isDark ? 'dark' : 'light');
                     "
                     class="p-2 rounded-xl text-claude-text-secondary dark:text-claude-text-dark-secondary hover:bg-claude-surface-subtle dark:hover:bg-claude-surface-dark-subtle border border-claude-border-default dark:border-claude-border-dark transition-colors"
-                    title="Toggle theme"
+                    title="Ganti tema terang/gelap"
                 >
                     <svg class="w-4 h-4 stroke-[1.5] hidden dark:block text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <circle cx="12" cy="12" r="4"></circle>
@@ -75,7 +75,7 @@
                     </svg>
                 </button>
 
-                <!-- Role Pill Indicator -->
+                <!-- Lencana Peran Akun -->
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono font-medium
                     @if(Auth::user()->isAdmin()) bg-rose-50 text-rose-700 border border-rose-200 dark:bg-rose-950/40 dark:text-rose-300 dark:border-rose-900/60
                     @elseif(Auth::user()->isEditor()) bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-900/60
@@ -89,7 +89,7 @@
                     {{ ucfirst(Auth::user()->role->value ?? Auth::user()->role) }}
                 </span>
 
-                <!-- User Dropdown Menu -->
+                <!-- Menu Dropdown Profil -->
                 <div class="relative" x-data="{ openMenu: false }">
                     <button
                         @click="openMenu = !openMenu"
@@ -122,7 +122,7 @@
                             <svg class="w-4 h-4 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                             </svg>
-                            <span>Profile Settings</span>
+                            <span>Pengaturan Profil</span>
                         </a>
 
                         <form method="POST" action="{{ route('logout') }}">
@@ -131,14 +131,14 @@
                                 <svg class="w-4 h-4 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
                                 </svg>
-                                <span>Sign Out</span>
+                                <span>Keluar (Logout)</span>
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
 
-            <!-- Hamburger Button for Mobile -->
+            <!-- Tombol Hamburger Mobile -->
             <div class="-me-2 flex items-center sm:hidden">
                 <button @click="open = !open" class="p-2 rounded-lg text-claude-text-secondary dark:text-claude-text-dark-secondary hover:bg-claude-surface-subtle dark:hover:bg-claude-surface-dark-subtle">
                     <svg class="h-6 w-6 stroke-[1.5]" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -150,27 +150,27 @@
         </div>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Menu Drawer Mobile -->
     <div :class="{'block': open, 'hidden': !open}" class="hidden sm:hidden border-t border-claude-border-default dark:border-claude-border-dark bg-claude-surface-elevated dark:bg-claude-surface-dark-elevated px-4 pt-3 pb-4 space-y-2">
         <a href="/" class="block px-3 py-2 rounded-lg text-sm font-medium text-claude-text-primary dark:text-claude-text-dark-primary hover:bg-claude-surface-subtle">
-            Catalog
+            Katalog
         </a>
         <a href="{{ route('dashboard') }}" class="block px-3 py-2 rounded-lg text-sm font-medium text-claude-text-primary dark:text-claude-text-dark-primary hover:bg-claude-surface-subtle">
             Dashboard
         </a>
         <a href="/demo/eager-loading" class="block px-3 py-2 rounded-lg text-sm font-medium text-claude-text-secondary dark:text-claude-text-dark-secondary hover:bg-claude-surface-subtle">
-            Demo Eager Loading
+            Uji N+1 Query
         </a>
         @if(Auth::user()->isAdmin() || Auth::user()->isEditor())
             <a href="/admin" class="block px-3 py-2 rounded-lg text-sm font-medium text-amber-700 dark:text-amber-400 hover:bg-amber-50">
-                Filament Admin
+                Panel Admin
             </a>
         @endif
         <div class="pt-3 border-t border-claude-border-subtle dark:border-claude-border-dark-subtle flex justify-between items-center">
             <span class="text-xs font-mono text-claude-text-tertiary">{{ Auth::user()->email }} ({{ Auth::user()->role->value ?? Auth::user()->role }})</span>
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <button type="submit" class="text-xs text-rose-600 dark:text-rose-400 font-medium">Log out</button>
+                <button type="submit" class="text-xs text-rose-600 dark:text-rose-400 font-medium">Keluar</button>
             </form>
         </div>
     </div>
