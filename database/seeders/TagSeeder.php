@@ -13,16 +13,16 @@ class TagSeeder extends Seeder
     public function run(): void
     {
         $tags = [
-            'Terlaris',
-            'Produk Baru',
-            'Promo Spesial',
-            'Edisi Terbatas',
-            'Ramah Lingkungan',
-            'Pilihan Editor',
-            'Sedang Tren',
-            'Diskon Eksklusif',
-            'Kualitas Premium',
-            'Cuci Gudang',
+            '5G Ready',
+            'Kamera Flagship',
+            'Baterai Awet 5000mAh',
+            'Fast Charging 120W',
+            'Layar AMOLED 120Hz',
+            'Garansi Resmi SEIN',
+            'Garansi Resmi iBox',
+            'Chipset Snapdragon',
+            'Pilihan Gamers',
+            'Best Seller Gadget',
         ];
 
         foreach ($tags as $name) {

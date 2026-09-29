@@ -18,18 +18,16 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         $categories = [
-            'Elektronik & Gadget',
-            'Busana & Pakaian',
-            'Perabot & Rumah Tangga',
-            'Kecantikan & Perawatan',
-            'Olahraga & Aktivitas Luar',
-            'Buku & Alat Tulis',
-            'Mainan & Hobi',
-            'Otomotif & Aksesoris',
-            'Perlengkapan Rumah',
-            'Makanan & Minuman Sehat',
-            'Komputer & Laptop',
-            'Kesehatan & Kebugaran',
+            'Smartphone Flagship',
+            'Smartphone Mid-Range',
+            'Smartphone Entry-Level',
+            'Tablet & iPad',
+            'Smartwatch & Wearable',
+            'Audio & TWS Nirkabel',
+            'Powerbank & Pengisi Daya',
+            'Casing & Aksesoris Gadget',
+            'Aksesoris Fotografi HP',
+            'Kabel Data & Konverter',
         ];
 
         return [

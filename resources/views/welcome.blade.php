@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }} &mdash; Katalog Toko E-Commerce</title>
+        <title>{{ config('app.name', 'Laravel') }} &mdash; Toko Handphone &amp; Gadget Resmi</title>
 
         <!-- Google Fonts: Lora (Editorial Serif), Inter (Sans), JetBrains Mono -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +42,7 @@
 
             addToBag(productName) {
                 this.cartCount++;
-                this.triggerToast('Berhasil menambahkan \'' + productName + '\' ke keranjang.');
+                this.triggerToast('Berhasil menambahkan \'' + productName + '\' ke keranjang belanja.');
             }
         }"
         class="font-sans antialiased bg-claude-canvas dark:bg-claude-canvas-dark text-claude-text-primary dark:text-claude-text-dark-primary selection:bg-claude-terracotta-subtle dark:selection:bg-claude-terracotta-dark-subtle selection:text-claude-terracotta min-h-screen flex flex-col justify-between"
@@ -54,17 +54,18 @@
                 <div class="flex items-center gap-3">
                     <a href="/" class="flex items-center gap-3 group">
                         <div class="w-9 h-9 rounded-xl bg-claude-surface-elevated dark:bg-claude-surface-dark-elevated border border-claude-border-default dark:border-claude-border-dark flex items-center justify-center text-claude-terracotta dark:text-claude-terracotta-dark shadow-sm group-hover:scale-105 transition-transform duration-200">
-                            <!-- Ikon Tas Belanja Minimalis -->
+                            <!-- Ikon Smartphone Modern Minimalis -->
                             <svg class="w-4 h-4 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                                <rect width="14" height="20" x="5" y="2" rx="3" ry="3"></rect>
+                                <path d="M12 18h.01"></path>
                             </svg>
                         </div>
                         <div class="flex flex-col">
                             <span class="font-serif text-lg font-semibold tracking-tight text-claude-text-primary dark:text-claude-text-dark-primary leading-tight">
-                                Katalog Toko
+                                GadgetStore
                             </span>
                             <span class="text-[10px] text-claude-text-tertiary dark:text-claude-text-dark-tertiary tracking-wider uppercase font-mono">
-                                E-Commerce Pilihan &bull; Edisi 11
+                                Toko HP & Gadget Resmi &bull; Edisi 11
                             </span>
                         </div>
                     </a>
@@ -172,15 +173,15 @@
             <!-- Bagian Hero Editorial -->
             <section class="pt-12 pb-8 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-claude-surface dark:bg-claude-surface-dark border border-claude-border-default dark:border-claude-border-dark text-claude-terracotta dark:text-claude-terracotta-dark mb-4">
-                    <span>Koleksi E-Commerce Pilihan &bull; Kualitas Premium</span>
+                    <span>Koleksi Handphone &amp; Gadget Pilihan &bull; Garansi Resmi Indonesia</span>
                 </div>
 
                 <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-claude-text-primary dark:text-claude-text-dark-primary leading-[1.15]">
-                    Produk pilihan berkualitas, dirancang untuk kenyamanan Anda.
+                    Smartphone &amp; Gadget Terbaru, Performa Terbaik.
                 </h1>
 
                 <p class="mt-4 text-base sm:text-lg text-claude-text-secondary dark:text-claude-text-dark-secondary max-w-2xl mx-auto leading-relaxed">
-                    Katalog kurasi berisi {{ $products->count() }} produk pilihan. Dilengkapi relasi Eloquent, sistem multi-peran yang aman, dan tanpa kendala N+1 query.
+                    Katalog kurasi berisi {{ $products->count() }} smartphone flagship, mid-range, tablet, smartwatch, dan aksesoris audio original. Dilengkapi jaminan garansi resmi dan performa query efisien.
                 </p>
 
                 <!-- Kotak Pencarian & Filter Cepat -->
@@ -193,7 +194,7 @@
                             <input
                                 type="text"
                                 x-model="searchQuery"
-                                placeholder="Cari produk, SKU, atau kata kunci..."
+                                placeholder="Cari tipe HP (Samsung, iPhone, Xiaomi), tablet, aksesoris..."
                                 class="w-full bg-transparent border-0 text-sm text-claude-text-primary dark:text-claude-text-dark-primary placeholder:text-claude-text-tertiary dark:placeholder:text-claude-text-dark-tertiary focus:ring-0 p-0"
                             />
                             <button
@@ -578,13 +579,14 @@
                 <div class="flex items-center gap-3">
                     <div class="w-7 h-7 rounded-lg bg-claude-surface-elevated dark:bg-claude-surface-dark-elevated border border-claude-border-default dark:border-claude-border-dark flex items-center justify-center text-claude-terracotta">
                         <svg class="w-3.5 h-3.5 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                            <rect width="14" height="20" x="5" y="2" rx="3" ry="3"></rect>
+                            <path d="M12 18h.01"></path>
                         </svg>
                     </div>
                     <span class="font-serif font-medium text-claude-text-primary dark:text-claude-text-dark-primary">
-                        Katalog Toko
+                        GadgetStore
                     </span>
-                    <span class="text-xs text-claude-text-tertiary font-mono">&mdash; Platform E-Commerce Pilihan</span>
+                    <span class="text-xs text-claude-text-tertiary font-mono">&mdash; Toko Handphone &amp; Gadget Resmi</span>
                 </div>
 
                 <div class="flex flex-wrap items-center gap-6 text-xs text-claude-text-tertiary">

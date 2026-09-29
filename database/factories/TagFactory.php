@@ -18,18 +18,18 @@ class TagFactory extends Factory
     public function definition(): array
     {
         $tags = [
-            'Terlaris',
-            'Produk Baru',
-            'Promo Spesial',
-            'Edisi Terbatas',
-            'Ramah Lingkungan',
-            'Pilihan Editor',
-            'Sedang Tren',
-            'Diskon Eksklusif',
-            'Kualitas Premium',
-            'Cuci Gudang',
-            'Gratis Ongkir',
-            'Garansi Resmi',
+            '5G Ready',
+            'Kamera Flagship',
+            'Baterai Awet 5000mAh',
+            'Fast Charging 120W',
+            'Layar AMOLED 120Hz',
+            'Garansi Resmi SEIN',
+            'Garansi Resmi iBox',
+            'Chipset Snapdragon',
+            'Pilihan Gamers',
+            'Best Seller Gadget',
+            'Wireless Charging',
+            'Water Resistant IP68',
         ];
 
         return [
