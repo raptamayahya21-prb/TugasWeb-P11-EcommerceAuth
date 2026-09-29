@@ -6,12 +6,27 @@ use App\Models\Product;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Category;
+use App\Models\Tag;
+
 Route::get('/', function () {
-    return view('welcome');
+    $categories = Category::withCount('products')->get();
+    $tags = Tag::all();
+    $products = Product::with(['category', 'tags'])
+        ->latest()
+        ->get();
+
+    return view('welcome', compact('categories', 'tags', 'products'));
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $totalProducts = Product::count();
+    $totalCategories = Category::count();
+    $inStockProducts = Product::where('stock', '>', 0)->count();
+    $discountedProducts = Product::where('discount_percentage', '>', 0)->count();
+    $recentProducts = Product::with(['category', 'tags'])->latest()->take(6)->get();
+
+    return view('dashboard', compact('totalProducts', 'totalCategories', 'inStockProducts', 'discountedProducts', 'recentProducts'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
